@@ -276,7 +276,7 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
       case pt:
         return [_dayScrollView, _monthScrollView, _yearScrollView];
       default:
-        return [_monthScrollView, _dayScrollView, _yearScrollView];
+        return [_yearScrollView, _monthScrollView, _dayScrollView];
     }
   }
 
@@ -311,12 +311,9 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
               ),
               widget.indicator ??
                   Container(
-                    height: widget.options.itemExtent,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.withOpacity(0.15),
-                      borderRadius: const BorderRadius.all(Radius.circular(4)),
-                    ),
-                  ),
+                      height: widget.options.itemExtent,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Color(0xffEBEBEB)))),
               Expanded(
                 child: Container(
                   decoration: BoxDecoration(
@@ -324,7 +321,7 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        widget.options.backgroundColor.withOpacity(0.7),
+                        widget.options.backgroundColor.withOpacity(0.2),
                         widget.options.backgroundColor,
                       ],
                     ),
