@@ -311,9 +311,15 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
               ),
               widget.indicator ??
                   Container(
+                      margin: EdgeInsets.symmetric(horizontal: 30),
                       height: widget.options.itemExtent,
                       decoration: BoxDecoration(
-                        border: Border.all(color: Color(0xffEBEBEB)))),
+                          border: Border(
+                              top: BorderSide(color: Color(0xffEBEBEB)),
+                              bottom: BorderSide(
+                                color: Color(0xffEBEBEB),
+                              )))),
+              // 0xffEBEBEB
               Expanded(
                 child: Container(
                   decoration: BoxDecoration(
